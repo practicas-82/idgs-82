@@ -1,0 +1,29 @@
+Registrar un nuevo usuario
+---
+tags:
+  - Registrar
+parameters:
+  - name: body
+    in: body
+    required: true
+    schema:
+      id: Registro
+      required:
+        - username
+        - email
+        - password
+      properties:
+        username:
+          type: string
+          example: "usuario123"
+        email:
+          type: string
+          example: "test@mail.com"
+        password:
+          type: string
+          example: "password123"
+responses:
+  201:
+    description: Usuario creado exitosamente
+  400:
+    description: Error en el registro
